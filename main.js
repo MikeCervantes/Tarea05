@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var schema = require('./schema');
 
-mongoose.connect('mongodb://localhost:27017/test');
+mongoose.connect('mongodb://localhost:27017/tarea05');
 
 var User = mongoose.model('User2',schema,'users2');
 
@@ -29,7 +29,7 @@ User.find({},(error,docs)=>{
     process.exit(0);
 });
 
-User.update({name:"José Miguel Cervantes Jiménez"},{$set: {email:"jomicervantesji@ittepic.edu.mx"}},(error,docs)=>{
+User.update({name:"Mike Cervantes"},{$set: {email:"jomicervantesji@ittepic.edu.mx"}},(error,docs)=>{
     if(error){
         console.log(error);
         process.exit(1);
@@ -39,7 +39,7 @@ User.update({name:"José Miguel Cervantes Jiménez"},{$set: {email:"jomicervante
     process.exit(0);
 });
 
-User.findByIdAndRemove({_id:"5d14ee13a7dbf622a44bdbeb"},(error,docs)=>{
+User.findByIdAndRemove({_id:"5d19403b110da401fcdcdb16"},(error,docs)=>{
     if(error){
         console.log(error);
         process.exit(1);
