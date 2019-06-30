@@ -6,8 +6,8 @@ mongoose.connect('mongodb://localhost:27017/test');
 var User = mongoose.model('User2',schema,'users2');
 
 var user = new User({
-    name: 'Denisse Yaneth',
-    email: 'denisse@yaneth.edu'
+    name: 'Mike Cervantes',
+    email: 'mikecervantes@hotmail.com'
 });
 
 user.save(function(error){
